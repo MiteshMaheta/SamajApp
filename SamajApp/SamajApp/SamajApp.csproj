@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+    <PackageReference Include="NLog" Version="4.6.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="SharpZipLib" Version="1.1.0" />
+    <PackageReference Include="Prism.Forms" Version="7.2.0.1367" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1367" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="NLog.Config" Version="4.6.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Helper\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\MainPage\" />
+    <Folder Include="Views\MasterPage\" />
+    <Folder Include="CustomControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\MasterPage\MasterPageDetail.xaml" />
+    <EmbeddedResource Remove="Views\MasterPage\MasterPageMaster.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\MasterPage\MasterPageDetail.xaml.cs" />
+    <Compile Remove="Views\MasterPage\MasterPageMaster.xaml.cs" />
+    <Compile Remove="Views\MasterPage\MasterPageMenuItem.cs" />
+  </ItemGroup>
+</Project>

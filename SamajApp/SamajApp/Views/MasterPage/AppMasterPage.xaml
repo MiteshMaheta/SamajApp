@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SamajApp.Views.AppMasterPage"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True" Icon="hamburger.png"
+             >
+  <MasterDetailPage.Master>
+     <ContentPage Title="Menu" Icon="hamburger.png" >
+            <!-- TODO: // Update the Layout and add some real menu items  
+                <Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" /> -->
+            <StackLayout>
+                <Button Image="ic_launcher.png" Text="Send Message" Command="{Binding NavigateCommand}" CommandParameter="NavigationPage/MainPage"/>
+                <Button Text="Collection" Command="{Binding NavigateCommand}" CommandParameter="NavigationPage/SettingsPage"/>
+                <Button Text="Directory" Command="{Binding NavigateCommand}" CommandParameter="NavigationPage/SettingsPage"/>
+                <Button Text="Matrimony" Command="{Binding NavigateCommand}" CommandParameter="NavigationPage/SettingsPage"/>
+                <Button Text="Business" Command="{Binding NavigateCommand}" CommandParameter="NavigationPage/SettingsPage"/>
+            </StackLayout>
+
+        </ContentPage>
+  </MasterDetailPage.Master>
+ 
+</MasterDetailPage>
